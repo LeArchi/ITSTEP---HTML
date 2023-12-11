@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.sky {
+    background-image: url('dark_sky.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.planet {
+    width: 400px;
+    height: 400px;
+    background-image: url('planet.png');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotatePlanet 10s linear infinite;
+}
+
+@keyframes rotatePlanet {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.comet {
+    width: 50px;
+    height: 50px;
+    background-image: url('asteroid.png');
+    background-size: cover;
+    position: absolute;
+    animation: flyComet 15s linear infinite, rotateComet 5s linear infinite;
+}
+
+@keyframes flyComet {
+    0% {
+        left: -50px;
+        top: 30%;
+    }
+    100% {
+        left: 110vw;
+        top: 70%;
+    }
+}
+
+@keyframes rotateComet {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
