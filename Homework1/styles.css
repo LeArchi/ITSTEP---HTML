@@ -86,10 +86,74 @@ p {
     text-align: center;
 }
 
-.footer {
+footer {
     background-color: #4a4a4a;
     color: #fff;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+    border-width: 2px;
+    border: #333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+input.valid {
+    border: 2px solid green;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+
+@media (min-width: 938px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 937px) and (min-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
